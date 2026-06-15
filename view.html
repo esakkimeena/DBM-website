@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+</head>
+<body>
+
+<h2>Employee List</h2>
+
+<form method="GET" action="/view">
+    <input type="text" name="search" placeholder="Search Employee Name">
+    <button type="submit">Search</button>
+</form>
+
+<br>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Address</th>
+    <th>Department</th>
+    <th>City</th>
+    <th>Salary</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Username</th>
+    <th>Action</th>
+</tr>
+
+{% for row in data %}
+
+<tr>
+    <td>{{ row['id'] }}</td>
+    <td>{{ row['name'] }}</td>
+    <td>{{ row['age'] }}</td>
+    <td>{{ row['address'] }}</td>
+    <td>{{ row['department'] }}</td>
+    <td>{{ row['city'] }}</td>
+    <td>{{ row['salary'] }}</td>
+    <td>{{ row['email'] }}</td>
+    <td>{{ row['phone'] }}</td>
+    <td>{{ row['username'] }}</td>
+
+    <td>
+        <a href="/edit/{{ row['id'] }}">Edit</a> |
+        <a href="/delete/{{ row['id'] }}">Delete</a>
+    </td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

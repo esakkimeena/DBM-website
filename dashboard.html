@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+        }
+
+        .content {
+            padding: 30px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3>Menu</h3>
+    <a href="/dashboard">Profile</a>
+    <a href="/view">Employees</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="content">
+    <h2>Welcome {{ user['name'] }}</h2>
+
+    <p><b>Email:</b> {{ user['email'] }}</p>
+    <p><b>Phone:</b> {{ user['phone'] }}</p>
+    <p><b>Department:</b> {{ user['department'] }}</p>
+    <p><b>City:</b> {{ user['city'] }}</p>
+    <p><b>Salary:</b> {{ user['salary'] }}</p>
+    <p><b>Age:</b> {{ user['age'] }}</p>
+
+
+
+</div>
+
+</body>
+</html>

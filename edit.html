@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Employee</title>
+</head>
+<body>
+
+<h2>Edit Employee</h2>
+
+<form method="POST">
+
+    Name:
+    <input type="text" name="name" value="{{ employee[3] }}">
+    <br><br>
+
+    Age:
+    <input type="number" name="age" value="{{ employee[4] }}">
+    <br><br>
+
+    Department:
+    <input type="text" name="department" value="{{ employee[7] }}">
+    <br><br>
+
+    City:
+    <input type="text" name="city" value="{{ employee[7] }}">   
+    <br><br>
+
+    <button type="submit">Update</button>
+
+</form>
+
+</body>
+</html>
